@@ -1,16 +1,21 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Watch from './pages/Watch.jsx'
+import Search from './pages/Search.jsx'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className=''>
-        <h1>Hello this is my youtube clone project</h1>
-      </div>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/watch/:id' element={<Watch />}></Route>
+        <Route path='/search' element={<Search />}></Route>
+      </Routes>
+    </BrowserRouter>
+    )
 }
 
 export default App
