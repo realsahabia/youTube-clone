@@ -10,7 +10,6 @@ import Navbar from './components/Navbar.jsx'
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/watch/:id' element={<Watch />}></Route>
